@@ -37,7 +37,7 @@ public class CityScript : MonoBehaviour
                 {
                     int n = Random.Range(0, buildings.Length);
                     Vector3 pos = new Vector3(w*1.4f , 0, h*1.4f );                  
-                    GameObject g=Instantiate(buildings[n], pos, Quaternion.identity);
+                    GameObject g=Instantiate(buildings[0], pos, Quaternion.identity);
                     g.transform.Rotate(0, 180f, 0);
                 }
                 else
@@ -45,7 +45,7 @@ public class CityScript : MonoBehaviour
                     
                     int n = Random.Range(0, buildings.Length);
                     Vector3 pos = new Vector3((w*1.4f), 0, (h*1.4f)  + roadWidth);
-                    Instantiate(buildings[n], pos, Quaternion.identity);
+                    Instantiate(buildings[0], pos, Quaternion.identity);
 
                 }
             }
