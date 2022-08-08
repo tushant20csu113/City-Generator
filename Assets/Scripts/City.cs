@@ -14,6 +14,7 @@ public class City
     {
         this.cityName = cityName;
         lanes = new CityLane[noOfLanes];
+        BuildCity();
     }
     public void BuildCity()
     {

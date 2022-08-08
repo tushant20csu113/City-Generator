@@ -6,33 +6,68 @@ public class CityLane
 {
     public float length;
     public float width;
+    private int direction;
     public Vector3 lanePosition;
     public List<House> houses;
+    GameObject laneObject;
 
     private Vector3 currentPosition;
     public float occupiedLength;
+    private float gap;
+    
 
     public CityLane()
     {
+        direction = 1;
         houses = new List<House>();
         occupiedLength = 0;
-        length = 100;
+        laneObject = GameObject.CreatePrimitive(PrimitiveType.Plane);
+        //laneObject.transform.localScale = new Vector3(3, 1,3);
+        length = laneObject.GetComponent<MeshFilter>().mesh.bounds.size.z;
+        currentPosition = new Vector3(direction*length / 2, 0, -length / 2);
+        gap = 0.2f;
     }
     public void BuildLane()
     {
-        House houseToBuild = BuildHouse();
-        while(occupiedLength<length)
+        int counter=0;
+        
+        Debug.Log(occupiedLength);
+        while(occupiedLength<length*2)
         {
-            if(occupiedLength+houseToBuild.length>length)
+            House houseToBuild = BuildHouse();
+            if (occupiedLength+houseToBuild.length>length)
             {
-                break;
+                Debug.Log("House cannot be added.Space not available");
+                occupiedLength = 0;
+                currentPosition.z = -length / 2;
+                currentPosition.x = -length / 2;
+                direction = -1;
+                counter++;
+                if (counter == 2)
+                {
+                    houseToBuild.Demolish();
+                    break;
+                }
             }
-            occupiedLength += houseToBuild.length;
+            //House Construction complete
+            occupiedLength += houseToBuild.length+gap;
+            PlaceHouse(houseToBuild);
+            currentPosition += Vector3.forward * gap;
             houses.Add(houseToBuild);
+            //houseToBuild = BuildHouse();
+            //Debug.Log("House added"+ houseToBuild.length+" Total houses "+houses.Count;
         }
     }
     public House BuildHouse()
     {
-        return new House();
+        return new House(laneObject.transform);
     }
+    private void PlaceHouse(House house)
+    {
+        currentPosition += new Vector3(-direction*house.width/2,house.height/2, house.length / 2);
+        Debug.Log("New position " + currentPosition);
+        house.PlaceAt(currentPosition);
+        currentPosition = new Vector3(direction*length / 2, 0, currentPosition.z + house.length / 2);
+    }
+
 }
