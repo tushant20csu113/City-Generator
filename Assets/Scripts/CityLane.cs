@@ -16,13 +16,14 @@ public class CityLane
     private float gap;
     
 
-    public CityLane()
+    public CityLane(Vector3 roadWidth)
     {
         direction = 1;
         houses = new List<House>();
         occupiedLength = 0;
         laneObject = GameObject.CreatePrimitive(PrimitiveType.Plane);
         //laneObject.transform.localScale = new Vector3(3, 1,3);
+        laneObject.transform.position =roadWidth;
         length = laneObject.GetComponent<MeshFilter>().mesh.bounds.size.z;
         currentPosition = new Vector3(direction*length / 2, 0, -length / 2);
         gap = 0.2f;

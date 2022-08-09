@@ -13,7 +13,7 @@ public class House
         
         //Randomises length of houses
         length = Random.Range((int)2, 4);
-        width = 4.8f;
+        width = 4f;
         //Random.Range((int)3, 5);
         height = Random.Range((int)1, 3);
         houseObject = GameObject.CreatePrimitive(PrimitiveType.Cube);
