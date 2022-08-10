@@ -8,7 +8,7 @@ public class CityLane
     public float width;
     private int direction;
     public Vector3 lanePosition;
-    public List<House> houses;
+    public Stack<House> houses;
     GameObject laneObject;
 
     private Vector3 currentPosition;
@@ -19,22 +19,23 @@ public class CityLane
     public CityLane(Vector3 roadWidth)
     {
         direction = 1;
-        houses = new List<House>();
+        houses = new Stack<House>();
         occupiedLength = 0;
         laneObject = GameObject.CreatePrimitive(PrimitiveType.Plane);
         //laneObject.transform.localScale = new Vector3(3, 1,3);
         laneObject.transform.position =roadWidth;
         length = laneObject.GetComponent<MeshFilter>().mesh.bounds.size.z;
         currentPosition = new Vector3(direction*length / 2, 0, -length / 2);
-        gap = 0.2f;
+        gap = 0.3f;
     }
-    public void BuildLane()
+    public IEnumerator BuildLane()
     {
         int counter=0;
         
         Debug.Log(occupiedLength);
         while(occupiedLength<length*2)
         {
+            yield return new WaitForSeconds(0.3f);
             House houseToBuild = BuildHouse();
             if (occupiedLength+houseToBuild.length>length)
             {
@@ -54,7 +55,7 @@ public class CityLane
             occupiedLength += houseToBuild.length+gap;
             PlaceHouse(houseToBuild);
             currentPosition += Vector3.forward * gap;
-            houses.Add(houseToBuild);
+            houses.Push(houseToBuild);
             //houseToBuild = BuildHouse();
             //Debug.Log("House added"+ houseToBuild.length+" Total houses "+houses.Count;
         }

@@ -16,14 +16,14 @@ public class City
         this.cityName = cityName;
         lanes = new CityLane[noOfLanes];
         this.roadWidth = roadWidth;
-        BuildCity();
+        
     }
-    public void BuildCity()
+    public IEnumerator BuildCity()
     {
         for(int i=0;i< lanes.Length;i++)
         {
             lanes[i] = new CityLane(GetLanePosition(i));
-            lanes[i].BuildLane();
+            yield return lanes[i].BuildLane();
             //roadWidth = new Vector3(5f,0,0);
         }
     }

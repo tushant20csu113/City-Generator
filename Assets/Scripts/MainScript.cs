@@ -6,9 +6,10 @@ public class MainScript : MonoBehaviour
 {
     City Detriot;
     // Start is called before the first frame update
-    void Start()
+    IEnumerator Start()
     {
-        Detriot = new City("Detriot", 10,14);
+        Detriot = new City("Detriot", 6,14);
+        yield return Detriot.BuildCity();
         
     }
 
