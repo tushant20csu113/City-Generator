@@ -8,7 +8,8 @@ public class CityLane
     public float width;
     private int direction;
     public Vector3 lanePosition;
-    public Stack<House> houses;
+    //public Stack<House> houses;
+    public Queue<House> houses;
     GameObject laneObject;
 
     private Vector3 currentPosition;
@@ -19,7 +20,8 @@ public class CityLane
     public CityLane(Vector3 roadWidth)
     {
         direction = 1;
-        houses = new Stack<House>();
+        //houses = new Stack<House>();
+        houses = new Queue<House>();
         occupiedLength = 0;
         laneObject = GameObject.CreatePrimitive(PrimitiveType.Plane);
         //laneObject.transform.localScale = new Vector3(3, 1,3);
@@ -48,6 +50,7 @@ public class CityLane
                 if (counter == 2)
                 {
                     houseToBuild.Demolish();
+                    
                     break;
                 }
             }
@@ -55,7 +58,8 @@ public class CityLane
             occupiedLength += houseToBuild.length+gap;
             PlaceHouse(houseToBuild);
             currentPosition += Vector3.forward * gap;
-            houses.Push(houseToBuild);
+            //houses.Push(houseToBuild);
+            houses.Enqueue(houseToBuild);
             //houseToBuild = BuildHouse();
             //Debug.Log("House added"+ houseToBuild.length+" Total houses "+houses.Count;
         }
@@ -63,6 +67,15 @@ public class CityLane
     public House BuildHouse()
     {
         return new House(laneObject.transform);
+    }
+    public IEnumerator DestroyLane()
+    {
+        foreach (House house in houses)
+        {
+            yield return new WaitForSeconds(0.3f);
+            house.Demolish();
+        }
+       
     }
     private void PlaceHouse(House house)
     {
