@@ -8,9 +8,9 @@ public class MainScript : MonoBehaviour
     // Start is called before the first frame update
     IEnumerator Start()
     {
-        Detriot = new City("Detriot", 4,14);
+        Detriot = new City("Detriot", 1,14);
         yield return Detriot.BuildCity();
-        yield return Detriot.DestroyCity();
+        //yield return Detriot.DestroyCity();
 
     }
 

@@ -11,6 +11,7 @@ public class CityLane
     public Stack<House> houses;
     //public Queue<House> houses;
     GameObject laneObject;
+    
 
     private Vector3 currentPosition;
     public float occupiedLength;
