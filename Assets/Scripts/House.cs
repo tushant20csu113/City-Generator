@@ -29,7 +29,7 @@ public class House
         Debug.Log("house height is " + houseHeight);
         float humanHeight = human.GetComponent<MeshFilter>().mesh.bounds.size.y;
         Debug.Log("human position is " + houseHeight * height);
-        human.transform.localPosition = new Vector3(0,houseHeight, 0f);
+        human.transform.localPosition = new Vector3(0,houseHeight/height+ 1 / (height * 2), 0f);
 
     }
     public void PlaceAt(Vector3 position)
