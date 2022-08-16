@@ -421,6 +421,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   human: {fileID: 0}
   ground: {fileID: 1629964495}
+  xPosition: 0
+  zPosition: 0
 --- !u!64 &1629964492
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -512,6 +514,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   human: {fileID: 0}
   ground: {fileID: 1629964495}
+  xPosition: 0
+  zPosition: 0
 --- !u!114 &1629964497
 MonoBehaviour:
   m_ObjectHideFlags: 0

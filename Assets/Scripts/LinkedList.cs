@@ -8,30 +8,14 @@ public class LinkedList : MonoBehaviour
     public void Ques()
     {
         LinkedList list = new LinkedList();
-        //10
-        for (int i = 10; i >= 1; i--)
+        int n = 10;
+        for (int i = n; i >= 1; i--)
         {
             list.PushNode(i);
-            // list.PrintNode();     
+            //list.PrintNode();     
         }
         list.PrintMiddle();
-        /*
-                //20
-                for (int i = 20; i >= 1; i--)
-                {
-                    list.PushNode(i);
-                    list.PrintNode();
-                    list.PrintMiddle();
-                }
-
-                //50
-                for (int i = 50; i >= 1; i--)
-                {
-                    list.PushNode(i);
-                    list.PrintNode();
-                    list.PrintMiddle();
-                }
-        */
+    
     }
 
     class Node // Creating new node
@@ -64,10 +48,10 @@ public class LinkedList : MonoBehaviour
         Node temp = head;
         while (temp != null)
         {
-            Debug.Log(temp.data + "->");
+            Debug.Log(temp.data);
             temp = temp.next;
         }
-        Debug.Log("Null" + "\n");
+        
     }
 
     //Find Length of the list

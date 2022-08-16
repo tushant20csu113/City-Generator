@@ -12,12 +12,7 @@ public class Police : Human
     {
         human.GetComponent<MeshRenderer>().material.color = Color.green;
     }
-    public override void Start()
-    {
-        //xPosition = 5f;
-        base.Start();
-        
-    }
+   
     public override Transform GetPosition()
     {
         return base.GetPosition();

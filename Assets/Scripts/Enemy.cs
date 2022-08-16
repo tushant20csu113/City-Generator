@@ -12,8 +12,5 @@ public class Enemy : Human
     {
         human.GetComponent<MeshRenderer>().material.color = Color.red;
     }
-    public override void Start()
-    {
-        base.Start();
-    }
+   
 }
