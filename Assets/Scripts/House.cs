@@ -21,8 +21,8 @@ public class House
         houseObject.transform.SetParent(parent);
         houseObject.transform.localScale = new Vector3(width, height, length);
         houseObject.GetComponent<MeshRenderer>().material.color = bColors[Random.Range((int)0,3)];
-      //humanSpawn();
-        humanSpawn2();
+        humanSpawn();
+        //humanSpawn2();
       
     //uman.transform.localScale = new Vector3(0.1f, 1/(height*2), 0.2f);
        
@@ -54,7 +54,7 @@ public class House
         human.transform.localScale = new Vector3(0.1f, 1 / (height * 2), 0.2f);
         float houseHeight = houseObject.GetComponent<MeshFilter>().mesh.bounds.size.y;
         float humanHeight = human.GetComponent<MeshFilter>().mesh.bounds.size.y;
-    human.transform.localPosition = new Vector3(0, houseHeight / 2 + (humanHeight / 2 * (1 / (height * 2))), 0f);       
+        human.transform.localPosition = new Vector3(0, houseHeight / 2 + (humanHeight / 2 * (1 / (height * 2))), 0f);       
     }
     public void PlaceAt(Vector3 position)
     {
