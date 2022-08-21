@@ -23,13 +23,13 @@ public class DotProduct : MonoBehaviour
             Debug.DrawRay(enemy.transform.position,direction,Color.red);
            
             float range = Vector3.Dot(enemy.transform.forward, direction);
-            //Debug.DrawRay(enemy.transform.position, range , Color.yellow );
+            Debug.DrawRay(enemy.transform.position, enemy.transform.forward*5, Color.blue);
             Debug.Log("Range is: " + range);
             if (range > 0)
             {
                 //enemy.transform.LookAt(player.transform);
                 enemy.transform.GetComponent<MeshRenderer>().material.color = Color.red;
-                enemy.transform.position = Vector3.MoveTowards(enemy.transform.position, player.transform.position, Time.deltaTime * speed);
+                //enemy.transform.position = Vector3.MoveTowards(enemy.transform.position, player.transform.position, Time.deltaTime * speed);
               
             }
             else
