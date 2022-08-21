@@ -10,17 +10,26 @@ public class City
     public CityLane[] lanes;
     private string cityName;
     float roadWidth=0;
-    
-    public City(string cityName,int noOfLanes,float roadWidth)
+    private static City instance;
+    public static City Instance
+    {
+        get
+        {
+            if (instance == null) instance = new City();
+            return instance;
+        }
+    }
+    private City()
+    {
+
+    }
+   
+    public IEnumerator BuildCity(string cityName, int noOfLanes, float roadWidth)
     {
         this.cityName = cityName;
         lanes = new CityLane[noOfLanes];
         this.roadWidth = roadWidth;
-        
-    }
-    public IEnumerator BuildCity()
-    {
-        for(int i=0;i< lanes.Length;i++)
+        for (int i=0;i< lanes.Length;i++)
         {
             lanes[i] = new CityLane(GetLanePosition(i));
             yield return lanes[i].BuildLane();

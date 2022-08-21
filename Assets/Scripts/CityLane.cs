@@ -16,8 +16,8 @@ public class CityLane
     private Vector3 currentPosition;
     public float occupiedLength;
     private float gap;
-    
 
+    
     public CityLane(Vector3 roadWidth)
     {
         direction = 1;
