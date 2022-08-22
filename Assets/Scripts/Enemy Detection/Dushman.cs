@@ -75,7 +75,7 @@ public class Dushman : MonoBehaviour
                 //enemy.LookAt(player.transform);
                 rotationAngle = range / (enemy.transform.forward.magnitude * playerDirection.magnitude);
                 Debug.Log(rotationAngle);
-                enemy.Rotate(new Vector3(0, transform.position.y, 0), -rotationAngle * Mathf.Rad2Deg);
+                enemy.Rotate(new Vector3(0, transform.position.y, 0), rotationAngle * Mathf.Rad2Deg);
                 enemy.transform.GetComponent<MeshRenderer>().material.color = Color.red;
                 Debug.Log("Player detected");
                 enemy.position = Vector3.MoveTowards(enemy.transform.position, player.transform.position, Time.deltaTime * speed);
