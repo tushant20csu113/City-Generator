@@ -55,11 +55,11 @@ public class Player : MonoBehaviour
         float verticalInput = Input.GetAxis("Vertical");
 
         Vector3 movement = new Vector3(horizontalInput, 0, verticalInput).normalized;
-        m_Rb.useGravity = true;
+       
 
         if (movement == Vector3.zero)
         {
-            m_Rb.useGravity = false;
+            
             m_Rb.velocity = Vector3.zero;
             return;
         }

@@ -20,6 +20,7 @@ public class Dushman : MonoBehaviour
     bool detected;
     [SerializeField]
     private float speed = 2f;
+    private float rotationAngle;
 
     // Start is called before the first frame update
     void Start()
@@ -71,7 +72,9 @@ public class Dushman : MonoBehaviour
         {
             if (range > Mathf.Cos(detectionAngle * 0.5f * Mathf.Deg2Rad))
             {
-                enemy.LookAt(player.transform);
+                //enemy.LookAt(player.transform);
+                rotationAngle = range / (enemy.transform.forward.magnitude * playerDirection.magnitude);
+                enemy.Rotate(new Vector3(0,rotationAngle*Mathf.Rad2Deg,0));
                 enemy.transform.GetComponent<MeshRenderer>().material.color = Color.red;
                 Debug.Log("Player detected");
                 enemy.position = Vector3.MoveTowards(enemy.transform.position, player.transform.position, Time.deltaTime * speed);
