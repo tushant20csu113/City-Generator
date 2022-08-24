@@ -11,13 +11,13 @@ public class Dot : MonoBehaviour
     void Start()
     {
         enemy = gameObject.transform;
-
+        PlayerDetector();
     }
 
     // Update is called once per frame
     void Update()
     {
-        PlayerDetector();
+       
     }
     private void PlayerDetector()
     {
