@@ -1,54 +1,58 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Player : MonoBehaviour
 {
     [SerializeField]
     private float speed = 8f;
     private Vector3 direction;
+
+    //Singleton
     public static Player Instance { get; private set; }
+
     private Rigidbody m_Rb;
     public Camera followCamera;
     private Vector3 m_CameraPos;
+
+    private int playerHealth;
+    [SerializeField] TextMeshProUGUI m_Object;
     private void Awake()
     {
         Instance = this;
         m_Rb = GetComponent<Rigidbody>();
         m_CameraPos = followCamera.transform.position - transform.position;
+        playerHealth = 100;
 
     }
     // Start is called before the first frame update
     void Start()
     {
         gameObject.transform.GetComponent<MeshRenderer>().material.color = Color.blue;
-       
-
+        m_Object.text = "Health: " + playerHealth.ToString();
     }
 
     // Update is called once per frame
-    /*void Update()
+    void Update()
     {
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKeyDown(KeyCode.Space))
         {
-            direction = Vector3.forward;
+            if (playerHealth != 0)
+            {
+                playerHealth -= 10;
+                m_Object.text = "Health: " + playerHealth.ToString();
+            }
+            else
+            {
+                Debug.Log("Player Death");
+                Destroy(gameObject);
+            }
         }
-        else if (Input.GetKey(KeyCode.S))
-        {
-            direction = -Vector3.forward;
-        }
-        else if (Input.GetKey(KeyCode.D))
-        {
-            direction = Vector3.right;
-        }
-        else if (Input.GetKey(KeyCode.A))
-        {
-            direction = Vector3.left;
-        }
-        gameObject.transform.Translate(direction * speed * Time.deltaTime);
+       
       
 
-    }*/
+    }
     void FixedUpdate()
     {
         float horizontalInput = Input.GetAxis("Horizontal");
