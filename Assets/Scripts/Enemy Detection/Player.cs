@@ -17,20 +17,24 @@ public class Player : MonoBehaviour
     private Vector3 m_CameraPos;
 
     private int playerHealth;
+    
     [SerializeField] TextMeshProUGUI m_Object;
+  
     private void Awake()
     {
         Instance = this;
         m_Rb = GetComponent<Rigidbody>();
         m_CameraPos = followCamera.transform.position - transform.position;
         playerHealth = 100;
+        
 
     }
     // Start is called before the first frame update
     void Start()
     {
-        gameObject.transform.GetComponent<MeshRenderer>().material.color = Color.blue;
-        m_Object.text = "Health: " + playerHealth.ToString();
+        gameObject.transform.GetComponent<MeshRenderer>().material.color = Color.blue; //Player color.
+        m_Object.text = "Health: " + playerHealth.ToString(); //INitial health on screen
+       
     }
 
     // Update is called once per frame
@@ -41,7 +45,7 @@ public class Player : MonoBehaviour
             if (playerHealth != 0)
             {
                 playerHealth -= 10;
-                m_Object.text = "Health: " + playerHealth.ToString();
+                m_Object.text = "Health: " + playerHealth.ToString(); //Updated health depending on space pressed.
             }
             else
             {

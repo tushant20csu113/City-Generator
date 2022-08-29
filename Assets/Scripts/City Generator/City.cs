@@ -10,6 +10,7 @@ public class City
     public CityLane[] lanes;
     private string cityName;
     float roadWidth=0;
+    //Singleton
     private static City instance;
     public static City Instance
     {

@@ -1,15 +1,24 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class ZombieSpawner : MonoBehaviour
 {
     List<Zombie> zombies;
     public Zombie zombieObject;
     public int zombieCount;
+
+    private int playerScore;
+    [SerializeField] TextMeshProUGUI s_Object;
+    private void Awake()
+    {
+        playerScore = 0;
+    }
     // Start is called before the first frame update
     void Start()
     {
+        s_Object.text = "Score: " + playerScore.ToString();
         zombies = new List<Zombie>();
         for (int i = 0; i < zombieCount; i++)
         {
@@ -24,8 +33,10 @@ public class ZombieSpawner : MonoBehaviour
     {
          if (Input.GetKeyDown(KeyCode.A))
         {
-            //Random zombie kill
+            //Random zombie kill         
             KillZombie();
+            playerScore += 10;
+            s_Object.text = "Score: " + playerScore.ToString();
         }
 
     }
