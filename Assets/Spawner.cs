@@ -11,4 +11,20 @@ public class Spawner
         ground.transform.position = new Vector3();
 
     }
+    public class Player : MonoBehaviour    
+    {
+           
+           
+    }     
+    public class Enemy : MonoBehaviour 
+    { 
+        private void Start() 
+        {            
+                
+        }         
+        public void onPlayerDeath(Player player)    
+        {                         
+            //whatever Enemy should do after playerDeath
+        }
+    }
 }

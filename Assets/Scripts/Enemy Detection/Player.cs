@@ -32,11 +32,16 @@ public class Player : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        FindObjectOfType<Player>().playerDeathEvent += onZombieSpawn;
         gameObject.transform.GetComponent<MeshRenderer>().material.color = Color.blue; //Player color.
         m_Object.text = "Health: " + playerHealth.ToString(); //INitial health on screen
        
     }
 
+    public void onZombieSpawn(Zombie player)
+    {
+        //whatever Enemy should do after playerDeath
+    }
     // Update is called once per frame
     void Update()
     {

@@ -5,6 +5,10 @@ using TMPro;
 
 public class ZombieSpawner : MonoBehaviour
 {
+    //Observer pattern
+    public delegate void zombieSpawned(Player p);
+    public event zombieSpawned zombieSpawnEvent;
+
     List<Zombie> zombies;
     public Zombie zombieObject;
     public int zombieCount;
@@ -52,5 +56,10 @@ public class ZombieSpawner : MonoBehaviour
         zombies[index].KillZombie();
         zombies.RemoveAt(index);
 
+    }
+    private void Spawned()
+    {
+        zombieSpawnEvent(this);
+        Destroy(this.gameObject);
     }
 }
