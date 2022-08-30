@@ -12,11 +12,13 @@ public class Player : MonoBehaviour
     //Singleton
     public static Player Instance { get; private set; }
 
+
+
     private Rigidbody m_Rb;
     public Camera followCamera;
     private Vector3 m_CameraPos;
 
-    private int playerHealth;
+    private int playerHealth=100;
     
     [SerializeField] TextMeshProUGUI m_Object;
   
@@ -25,22 +27,23 @@ public class Player : MonoBehaviour
         Instance = this;
         m_Rb = GetComponent<Rigidbody>();
         m_CameraPos = followCamera.transform.position - transform.position;
-        playerHealth = 100;
-        
+      
 
     }
     // Start is called before the first frame update
     void Start()
     {
-        FindObjectOfType<Player>().playerDeathEvent += onZombieSpawn;
+        ZombieSpawner.Instance.zombieSpawnEvent += onZombieSpawn;
         gameObject.transform.GetComponent<MeshRenderer>().material.color = Color.blue; //Player color.
-        m_Object.text = "Health: " + playerHealth.ToString(); //INitial health on screen
+        //m_Object.text = "Health: " + playerHealth.ToString(); //INitial health on screen
+        TextModal.Instance.PlayerHealth = playerHealth;
        
     }
 
-    public void onZombieSpawn(Zombie player)
+    public void onZombieSpawn(Zombie z)
     {
-        //whatever Enemy should do after playerDeath
+        //whatever Player should do after ZombieSpawn
+        Debug.Log("Zombie Spawned at "+z.zombiePosition());
     }
     // Update is called once per frame
     void Update()
@@ -50,7 +53,8 @@ public class Player : MonoBehaviour
             if (playerHealth != 0)
             {
                 playerHealth -= 10;
-                m_Object.text = "Health: " + playerHealth.ToString(); //Updated health depending on space pressed.
+                TextModal.Instance.PlayerHealth = playerHealth;
+                //m_Object.text = "Health: " + playerHealth.ToString(); //Updated health depending on space pressed.
             }
             else
             {

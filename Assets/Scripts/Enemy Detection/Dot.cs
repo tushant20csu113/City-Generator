@@ -32,7 +32,7 @@ public class Dot : MonoBehaviour
        
               
          float rotationAngle = Mathf.Acos(range / (enemy.transform.forward.magnitude * playerDirection.magnitude))*Mathf.Rad2Deg;
-         Debug.Log(rotationAngle);
+         //Debug.Log(rotationAngle);
          enemy.Rotate(new Vector3(0, transform.position.y, 0), rotationAngle);
               
               

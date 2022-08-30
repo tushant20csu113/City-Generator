@@ -20,10 +20,14 @@ public class Zombie
     }
     public Zombie()
      {}
+    public Vector3 zombiePosition()
+    {
+        return zombie.transform.position;
 
-   
-        
-    
+    }
+
+
+
     void PlayerDetector()
     {
 
