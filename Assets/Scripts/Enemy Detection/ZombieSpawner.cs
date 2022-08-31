@@ -48,9 +48,10 @@ public class ZombieSpawner : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.A))
         {
             //Random zombie kill         
-            KillZombie();
+            
             if (zombieCount != 0)
-            { 
+            {
+                KillZombie();
                 playerScore += 10;
                 TextModal.Instance.PlayerScore = playerScore;
                 //s_Object.text = "Score: " + playerScore.ToString();

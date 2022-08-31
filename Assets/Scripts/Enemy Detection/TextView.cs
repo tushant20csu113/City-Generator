@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
+[System.Serializable]
 public class TextView 
 {
     public TextMeshProUGUI h_Object;//Health
@@ -11,8 +12,8 @@ public class TextView
 
     public void StatsUpdate()
     {
-        h_Object.text = "Health: " + TextModal.Instance.PlayerHealth.ToString();
-        s_Object.text = "Score: " + TextModal.Instance.PlayerScore.ToString();
+        h_Object.text = "Health:" + TextModal.Instance.PlayerHealth.ToString();
+        s_Object.text = "Score:" + TextModal.Instance.PlayerScore.ToString();
     }
 
 }
