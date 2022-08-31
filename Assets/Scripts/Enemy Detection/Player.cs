@@ -20,7 +20,7 @@ public class Player : MonoBehaviour
 
     private int playerHealth=100;
     
-    [SerializeField] TextMeshProUGUI m_Object;
+    
   
     private void Awake()
     {
