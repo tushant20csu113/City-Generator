@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu(fileName ="Car",menuName ="Cars/Create New")]
-public class Cars : ScriptableObject
+public class CarsData : ScriptableObject
 {
-    public Sprite[] characters;
+    public Sprite carImage;
     public string carName;
     public Color carColor;
     public int topSpeed;

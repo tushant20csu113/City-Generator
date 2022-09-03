@@ -9,11 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 50f0ff4c3f98a9349970b4327dd2ccca, type: 3}
-  m_Name: Car
+  m_Script: {fileID: 11500000, guid: 0fa99461945a2724da6949e741fd0738, type: 3}
+  m_Name: Giant
   m_EditorClassIdentifier: 
-  carName: Lambo
+  carImage: {fileID: -8329793721300145300, guid: c03668aa404d9ee4394ca4e845838eea, type: 3}
+  carName: Giant
   carColor: {r: 0, g: 0, b: 0, a: 0}
-  topSpeed: 250
-  acceleration: 5
-  hitpoints: 100
+  topSpeed: 0
+  acceleration: 0
+  hitpoints: 0

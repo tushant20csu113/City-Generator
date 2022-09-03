@@ -20,6 +20,9 @@ TextureImporter:
   - first:
       213: 3854471664599747183
     second: Goblin
+  - first:
+      213: -6050455657986809937
+    second: 360-3605300_clash-of-clans-image-supercell-clash-of-clans_6
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -112,12 +115,12 @@ TextureImporter:
       name: Barbarian
       rect:
         serializedVersion: 2
-        x: 1
-        y: 360
-        width: 296
-        height: 354
+        x: 6
+        y: 448
+        width: 301
+        height: 266
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -133,12 +136,12 @@ TextureImporter:
       name: Archer
       rect:
         serializedVersion: 2
-        x: 300
-        y: 358
-        width: 245
-        height: 356
+        x: 342
+        y: 448
+        width: 204
+        height: 266
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -154,12 +157,12 @@ TextureImporter:
       name: Giant
       rect:
         serializedVersion: 2
-        x: 546
-        y: 357
-        width: 273.33334
-        height: 357
+        x: 563
+        y: 444
+        width: 257
+        height: 270
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -175,12 +178,12 @@ TextureImporter:
       name: Wizard
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 273
-        height: 357
+        x: 46
+        y: 87
+        width: 193
+        height: 270
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -197,11 +200,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 291
-        y: 1
-        width: 273
-        height: 357
+        y: 80
+        width: 276
+        height: 278
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -217,12 +220,12 @@ TextureImporter:
       name: Goblin
       rect:
         serializedVersion: 2
-        x: 572
-        y: 0
-        width: 248
-        height: 346
+        x: 592
+        y: 84
+        width: 220
+        height: 263
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -230,6 +233,27 @@ TextureImporter:
       bones: []
       spriteID: f6ac64d9e85dd7530800000000000000
       internalID: 3854471664599747183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 360-3605300_clash-of-clans-image-supercell-clash-of-clans_6
+      rect:
+        serializedVersion: 2
+        x: 546
+        y: 0
+        width: 22
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: faf9170c2a6780ca0800000000000000
+      internalID: -6050455657986809937
       vertices: []
       indices: 
       edges: []
