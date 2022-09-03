@@ -18,36 +18,37 @@ public class CharacterPanel : MonoBehaviour
         CurrentCarIndex = 0;
         UpdateHero();
     }
+   
     public void GUI_Next()
     {
         CurrentCarIndex++;
-        //Debug.Log("Next Index is" + CurrentCarIndex);
-        if(CurrentCarIndex >= cars.Length)
+        if(CurrentCarIndex < cars.Length)
         {
             UpdateHero();
         }
-        else
+        else 
         {
             CurrentCarIndex = 0;
+            UpdateHero();
         }
     }
     public void GUI_Previous()
     {
         CurrentCarIndex--;
-        //Debug.Log("Previous Index is" + CurrentCarIndex);
-        if (CurrentCarIndex > 0)
+        if (CurrentCarIndex >= 0)
         {
             UpdateHero();
         }
         else
         {
             CurrentCarIndex = cars.Length - 1;
+            UpdateHero();
         }
     }
     private void UpdateHero()
     {
-        Debug.Log("Updated");
         carImage.sprite = cars[CurrentCarIndex].carImage;
+        carName.text = cars[CurrentCarIndex].carName;
 
     }
 }
