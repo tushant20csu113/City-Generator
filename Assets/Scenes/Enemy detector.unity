@@ -1007,7 +1007,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69271d36fbf8b9042921a353c3242a38, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  zombieCount: 5
+  zombieCount: 10
   s_Object: {fileID: 519478430}
 --- !u!4 &1337509697
 Transform:

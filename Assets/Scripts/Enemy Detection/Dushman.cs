@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 
 public class Dushman : MonoBehaviour
 {
@@ -101,13 +102,13 @@ public class Dushman : MonoBehaviour
     }
 
    
-    private void OnDrawGizmos()
+    /*private void OnDrawGizmos()
     {
         Color c = new Color(0.8f,0,0,0.4f);
-        UnityEditor.Handles.color = c;
+        Handles.color = c;
 
         Vector3 rotatedForward = Quaternion.Euler(0, -detectionAngle * 0.5f, 0) * transform.forward;
-        UnityEditor.Handles.DrawSolidArc(transform.position, Vector3.up, rotatedForward, detectionAngle, detectionRadius);
+        Handles.DrawSolidArc(transform.position, Vector3.up, rotatedForward, detectionAngle, detectionRadius);
         
-    }
+    }*/
 }
