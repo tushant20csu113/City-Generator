@@ -921,7 +921,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9647059, g: 0.9647059, b: 0.9647059, a: 1}
+  m_Color: {r: 0.9294118, g: 0.9294118, b: 0.9294118, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1077,7 +1077,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: -12.45, y: 18.57}
   m_SizeDelta: {x: 251.7, y: 348.85}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1373609980
@@ -1100,9 +1100,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 7023439393992676078, guid: c03668aa404d9ee4394ca4e845838eea, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -1289,7 +1289,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Name
+  m_text: Barbarian
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1583,6 +1583,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 201b7c6527ceae744b400970e18fb640, type: 2}
   - {fileID: 11400000, guid: 8406c86a772cf9e4e9d24415300232fc, type: 2}
   - {fileID: 11400000, guid: 78168f7c51d976a4eb1114b98812b72f, type: 2}
+  - {fileID: 11400000, guid: 2484f6d00fd3b9e4cadcd5f6d1f67ce1, type: 2}
   carImage: {fileID: 1373609980}
   carName: {fileID: 1447815056}
 --- !u!114 &1740043340

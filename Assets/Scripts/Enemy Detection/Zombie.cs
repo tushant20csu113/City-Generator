@@ -5,7 +5,7 @@ using UnityEngine;
 public class Zombie
 {
     //zombieHealth
-    int zombieHealth = 100;
+    //int zombieHealth = 100;
     //RangeOfAttack
     float attackRange;
     protected GameObject zombie;
@@ -19,7 +19,8 @@ public class Zombie
 
     }
     public Zombie()
-     {}
+    {
+    }
     public Vector3 zombiePosition()
     {
         return zombie.transform.position;
