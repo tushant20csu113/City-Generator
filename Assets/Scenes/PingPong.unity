@@ -1166,6 +1166,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   paddleSpeed: 10
+  detectionAngle: 10
+  detectionRadius: 90
 --- !u!1 &908641344
 GameObject:
   m_ObjectHideFlags: 0
