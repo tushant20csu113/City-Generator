@@ -25,13 +25,13 @@ public class CityScript : MonoBehaviour
      */
     void Start()
     {
-        Vector3 size = ground.GetComponent<Renderer>().bounds.size;
+        Vector3 size = ground.GetComponent<MeshFilter>().mesh.bounds.size;
         mapHeight = size.x;
         mapWidth = size.z;
         //Lane 1
-        for (int h=0;h<4;h++)
+        for (int h=0;h<mapHeight;h++)
         {
-            for (int w = 0; w < laneWidth; w++)
+            for (int w = 0; w < mapWidth; w++)
             {
                 if (h < 2)
                 {

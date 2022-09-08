@@ -5,7 +5,8 @@ using UnityEngine;
 [CreateAssetMenu(fileName ="Car",menuName ="Cars/Create New")]
 public class CarsData : ScriptableObject
 {
-    public Sprite carImage;
+    //public Sprite carImage;
+    public GameObject carPrefab;
     public string carName;
     public Color carColor;
     public int topSpeed;

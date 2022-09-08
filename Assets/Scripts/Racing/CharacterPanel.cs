@@ -8,7 +8,8 @@ public class CharacterPanel : MonoBehaviour
 {
     public CarsData[] cars;
 
-    public Image carImage;
+    //public Image carImage;
+    public GameObject carPrefab;
     public TextMeshProUGUI carName;
 
     private int CurrentCarIndex;
@@ -47,7 +48,9 @@ public class CharacterPanel : MonoBehaviour
     }
     private void UpdateHero()
     {
-        carImage.sprite = cars[CurrentCarIndex].carImage;
+        //carImage.sprite = cars[CurrentCarIndex].carImage;
+        carPrefab = cars[CurrentCarIndex].carPrefab;
+        Instantiate(carPrefab);
         carName.text = cars[CurrentCarIndex].carName;
 
     }
