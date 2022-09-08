@@ -1,27 +1,43 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 
 public class EnemyPaddleAI : MonoBehaviour
 {
-    public float paddleSpeed;
+    public Rigidbody2D ball;
     private Rigidbody2D rb;
-    private Vector2 paddleDirection;
-    // Start is called before the first frame update
-    void Start()
+    public float racketSpeed;
+
+    private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        paddleDirection = Vector2.up;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        //float directionY = Input.GetAxisRaw("Vertical");
-       
-    }
     private void FixedUpdate()
     {
-        rb.velocity = paddleDirection * paddleSpeed;
+        if (ball.velocity.x > 0.0f) // Ball moving towards right
+        {
+            if (ball.position.y > transform.position.y) //Ball is above paddle
+            {
+                rb.AddForce(Vector2.up * racketSpeed);
+            }
+            else if (this.ball.position.y < transform.position.y)
+            {
+                rb.AddForce(Vector2.down * racketSpeed);
+            }
+        }
+        else //Ball moving towards player(left)
+        {
+            if (transform.position.y > 0.0f) //Paddle above half
+            {
+                rb.AddForce(Vector2.down * racketSpeed); //Move paddle down
+            }
+            else if (transform.position.y < 0.0f)
+            {
+                rb.AddForce(Vector2.up * racketSpeed);
+            }
+        }
     }
+
 }
