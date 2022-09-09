@@ -9,6 +9,96 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: Black.001
     second: {fileID: 3227750074796878546, guid: c715d0c6eb0b2dc4f8114df2687aad58, type: 3}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "F\u0131r\xE7alanm\u0131\u015F Aliminyum"
+    second: {fileID: 2100000, guid: b2a005e9d0285304082fe94dff81f170, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Glass.002
+    second: {fileID: 2100000, guid: b2a005e9d0285304082fe94dff81f170, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Glass.003
+    second: {fileID: 2100000, guid: 9ee5c46784db49b4aa8622a7b64cd08f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Karbon.001
+    second: {fileID: 2100000, guid: 7e877ff3e6bbd6e419372a23f775806c, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: "Kau\xE7uk"
+    second: {fileID: 2100000, guid: a46b3f49ef8761a45845d434ac19b5b0, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Led Light.001
+    second: {fileID: 2100000, guid: 68aa0f5cc4f555f4aae2d46fbf9adddf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Light.000
+    second: {fileID: 2100000, guid: fc4a693f2f7fc814793e6a6b619b6c67, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.005
+    second: {fileID: 2100000, guid: 76f48514bd45fd549aa7bec4bd6029dd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.006
+    second: {fileID: 2100000, guid: 6f3480dd757dd0441aa62055bef16e97, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.008
+    second: {fileID: 2100000, guid: 3d22cd71f84a3cd4eaf5d5ea32a4b3c2, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.010
+    second: {fileID: 2100000, guid: 7a045dc9381a1294fb03782ae907c768, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.012
+    second: {fileID: 2100000, guid: 95447c15fbb31c841a6f109a86f58741, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Paint
+    second: {fileID: 2100000, guid: 40cfc39a833724f48b9cf04f74f1da42, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Paint.001
+    second: {fileID: 2100000, guid: e43e0d92e0abdc944933ea1787c71dc6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Rubber
+    second: {fileID: 2100000, guid: f3642740cc11cf441b500940e5239ac3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Steel
+    second: {fileID: 2100000, guid: 64829667acc6f2a4c9a9e91f2e65aa82, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Wire
+    second: {fileID: 2100000, guid: 4d73f7feb75424248b1b26e008ee7a98, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: tyyre
+    second: {fileID: 2100000, guid: 09a8732499811884a81828c231700e83, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

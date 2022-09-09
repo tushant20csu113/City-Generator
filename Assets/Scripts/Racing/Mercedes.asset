@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fa99461945a2724da6949e741fd0738, type: 3}
   m_Name: Mercedes
   m_EditorClassIdentifier: 
-  carPrefab: {fileID: 919132149155446097, guid: c715d0c6eb0b2dc4f8114df2687aad58, type: 3}
+  carPrefab: {fileID: 5951398922628680166, guid: a90f5c9e9a152f44bbc5c5589e1c50d1, type: 3}
   carName: Mercedes Benz
   carColor: {r: 0, g: 0, b: 0, a: 0}
   topSpeed: 0
