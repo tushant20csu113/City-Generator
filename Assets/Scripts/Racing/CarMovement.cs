@@ -1,13 +1,17 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyCarMovement : MonoBehaviour
+public class CarMovement : MonoBehaviour
 {
-    [SerializeField] List<Transform> waypoints;
+    [SerializeField] 
+    List<Transform> waypoints;
 
-    [SerializeField] float enemySpeed = 2f;
+    [SerializeField]
+    float carSpeed = 2f;
+
+    [SerializeField]
+    float rotationSpeed = 2f;
 
     int waypointIndex = 0;
 
@@ -22,13 +26,13 @@ public class EnemyCarMovement : MonoBehaviour
         Gizmos.DrawSphere(waypoints[0].position, 0.5f);
 
         Gizmos.color = Color.green;
-        for(int i = 1; i < waypoints.Count; i++)
+        for (int i = 1; i < waypoints.Count; i++)
         {
             Gizmos.DrawSphere(waypoints[i].position, 0.5f);
         }
 
         Gizmos.color = Color.blue;
-        for(int i = 1; i < waypoints.Count; i++)
+        for (int i = 1; i < waypoints.Count; i++)
         {
             Gizmos.DrawLine(waypoints[i - 1].position, waypoints[i].position);
         }
@@ -47,9 +51,12 @@ public class EnemyCarMovement : MonoBehaviour
         if (waypointIndex <= waypoints.Count - 1)
         {
             var targetPosition = waypoints[waypointIndex].position;
-            var move = enemySpeed * Time.deltaTime;
+            var move = carSpeed * Time.deltaTime;
 
             transform.position = Vector3.MoveTowards(transform.position, targetPosition, move);
+            Quaternion currentRotation = transform.rotation;
+            Quaternion targetRotation = Quaternion.LookRotation(waypoints[waypointIndex].position - transform.position);
+            transform.rotation = Quaternion.Lerp(currentRotation, targetRotation, Time.deltaTime * rotationSpeed);
 
             if (Vector3.Distance(transform.position, waypoints[waypointIndex].position) < 0.1f)
             {
